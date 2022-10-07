@@ -13,7 +13,7 @@ function App() {
     // return html code inside the function
     // jsx is a mix of html and javascript
     <div className="App">
-      <h2>expense app</h2>
+      <h2>Expenses app</h2>
       {/*Imported custom component*/}
       <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date}></ExpenseItem>
       <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date}></ExpenseItem>
