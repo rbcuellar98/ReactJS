@@ -1,6 +1,6 @@
 import React from 'react';
 import './ExpenseDate.css';
-function ExpenseDate (props) {
+const ExpenseDate = (props) => {
     // eslint-disable-next-line no-lone-blocks
     {/* output date in human language with toLocaleString */}
     const month = props.date.toLocaleString('en-Us',{month: 'long'});

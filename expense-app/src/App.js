@@ -2,7 +2,7 @@ import React from 'react';
 import Expenses from './components/Expenses/Expenses';
 import './index.css';
 
-function App() {
+const App = () => {
   // components are reusible to pass promps data
   const expenses =[
     {id:'e1',title: 'STM Pass', amount: 60, date: new Date(2022, 2, 12)},

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-function Card (props) {
+const Card = (props) => {
     // eslint-disable-next-line no-lone-blocks
     {/**received by the classe name is added to that string*/}
     const classes = 'card ' + props.className;
