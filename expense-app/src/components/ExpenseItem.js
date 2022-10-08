@@ -1,6 +1,6 @@
 import ExpenseDate from './ExpenseDate';
-import './ExpenseItem.css';
 import Card from './Card';
+import './ExpenseItem.css';
 
 // component are written using JS functions
 // hold the value for custom elements with keys

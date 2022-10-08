@@ -13,7 +13,7 @@ function App() {
     // return html code inside the function
     // jsx is a mix of html and javascript
     <div className="App">
-      <h2>Expenses app</h2>
+      <h2> Expenses app</h2>
       {/** expenses being renderer*/}
       <Expenses items={expenses}/>
     </div>
