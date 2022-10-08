@@ -9,8 +9,13 @@ const App = () => {
     {id:'e1',title: 'STM Pass', amount: 60, date: new Date(2022, 2, 12)},
     {id:'e2',title: 'Phone Bill', amount: 55, date: new Date(2022,7,14)},
     {id:'e3',title: 'Rent',amount: 900, date: new Date(2022,7,20)},
-    {id:'e4',title: 'Subscription', amount: 20, date: new Date(2022, 6, 20)}
-  ]
+    {id:'e4',title: 'Subscription', amount: 20, date: new Date(2022, 6, 20)},
+  ];
+
+  const addExpenseHandler = expense =>{
+    console.log('In App.js');
+    console.log(expense);
+  }
     // eslint-disable-next-line no-lone-blocks
     {/*Alternative to JSX using React object*/}
   // return React.createElement(
@@ -24,7 +29,7 @@ const App = () => {
     // return html code inside the function
     // jsx is a mix of html and javascript
     <div className="App">
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       {/** expenses being renderer*/}
       <Expenses items={expenses}/>
     </div>
