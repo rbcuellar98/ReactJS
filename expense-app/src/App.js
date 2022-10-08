@@ -1,6 +1,7 @@
 import React from 'react';
 import Expenses from './components/Expenses/Expenses';
 import './index.css';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   // components are reusible to pass promps data
@@ -23,7 +24,7 @@ const App = () => {
     // return html code inside the function
     // jsx is a mix of html and javascript
     <div className="App">
-      <h2> Expenses app</h2>
+      <NewExpense></NewExpense>
       {/** expenses being renderer*/}
       <Expenses items={expenses}/>
     </div>
