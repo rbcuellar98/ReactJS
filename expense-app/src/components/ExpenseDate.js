@@ -1,3 +1,4 @@
+import React from 'react';
 import './ExpenseDate.css';
 function ExpenseDate (props) {
     // eslint-disable-next-line no-lone-blocks
