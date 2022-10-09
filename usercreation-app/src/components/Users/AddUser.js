@@ -8,13 +8,22 @@ const AddUser = (props) =>{
     // array destructuring pulling the elements out of the array 
     const [enteredUsername, setEnteredUsername] = useState('');
     const [enteredAge, setEnteredAge] = useState('');
+    const [error, setError] = useState();
 
     const addUserHandler = (event) =>{
         event.preventDefault();
         if(enteredUsername.trim().length === 0 || enteredAge.trim().length === 0){
+            setError({
+                title: 'Invalid input',
+                message: 'Please enter a valid name and age (non-empty value).'
+            });
             return;
         }
         if(+enteredAge < 1){ // ENSURE THAT IS A NUMBER BEING INPUTED 
+            setError({
+                title: 'Invalid age',
+                message: 'Please enter a valid age bigger than 0.'
+            });
             return;
         }
         props.onAddUser(enteredUsername, enteredAge);
@@ -28,11 +37,15 @@ const AddUser = (props) =>{
     const ageChangeHandler = (event) =>{
         setEnteredAge(event.target.value);
     }
+    const errorHandler = () => {
+        setError(null);
+    }
 
 
     return(
     <div>
-        <ErrorModal title="An error occured!" message="Something went wrong!"/>
+        {/*render jsx element with error message*/}
+     {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
                 <label htmlFor="username"> Username</label>
