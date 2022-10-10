@@ -11,6 +11,7 @@ const ExpenseItem = (props) => {
     // eslint-disable-next-line no-lone-blocks
     // eslint-disable-next-line jsx-a11y/heading-has-content
     return (
+        <li>
     <Card className="expense-item">
         {/* output date as a string */}
             {/* component tree nested with each other */}
@@ -20,6 +21,7 @@ const ExpenseItem = (props) => {
             <div className="expense-item__price">${props.amount}</div>
             </div>
     </Card>
+    </li>
     );
 }
 
